@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -27,7 +28,25 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <div className="flex min-h-screen flex-col bg-gray-50 text-gray-900">
+          <header className="border-b bg-white/80 backdrop-blur">
+            <div className="mx-auto flex h-14 w-full max-w-6xl items-center justify-between px-4">
+              <Link href="/" className="font-semibold tracking-tight">
+                TenX Dashboard
+              </Link>
+              <nav className="flex items-center gap-3 text-sm font-medium">
+                <Link
+                  href="/"
+                  className="rounded-full border border-gray-200 px-3 py-1 transition hover:border-gray-300"
+                >
+                  Back To Home
+                </Link>
+              </nav>
+            </div>
+          </header>
+
+          <main className="flex-1">{children}</main>
+        </div>
       </body>
     </html>
   );
