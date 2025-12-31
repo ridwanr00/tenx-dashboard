@@ -21,7 +21,6 @@ export default function ThemeToggle() {
       window.removeEventListener("storage", handleStorage)
   }, [setTheme])
 
-  // Apply theme to <html>
   useEffect(() => {
     document.documentElement.classList.toggle(
       "dark",

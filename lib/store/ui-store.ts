@@ -28,7 +28,7 @@ export const useUIStore = create<UIState>()(
       setTheme: (theme) => set({ theme }),
     }),
     {
-      name: "ui-preferences", // localStorage key
+      name: "ui-preferences",
     }
   )
 )

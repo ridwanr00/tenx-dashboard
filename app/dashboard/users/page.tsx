@@ -8,7 +8,6 @@ type Props = {
 }
 
 export default function UsersPage({ searchParams }: Props) {
-  // ✅ UNWRAP PROMISE DENGAN use()
   const params = use(searchParams)
   const query = params.q
 

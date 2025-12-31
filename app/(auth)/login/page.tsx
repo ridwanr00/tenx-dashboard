@@ -12,7 +12,7 @@ export default function LoginPage() {
 
     await signIn("credentials", {
       email: formData.get("email"),
-      redirect: true, // default
+      redirect: true,
     });
 
     broadcastAuthChange();

@@ -8,7 +8,7 @@ type User = {
   name: string
 }
 
-let USERS: User[] = [
+const USERS: User[] = [
   { id: 1, name: "Eka" },
   { id: 2, name: "Eki" },
 ]
